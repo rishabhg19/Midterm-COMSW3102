@@ -1,3 +1,5 @@
+# Full Stack Development Midterm Spring 2024
+
 To run this application, clone the repository locally, and make sure to have node_modules downloaded.
 Run
 `npm start`
