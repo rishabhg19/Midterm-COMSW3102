@@ -3,9 +3,10 @@ import Note from "./Note.jsx";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import NewNote from "./NewNote.jsx";
+import notes from "../notes.js"
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [allNotes, setNotes] = useState(notes);
 
   function addNote(newNote) {
     setNotes((prevNotes) => {
@@ -29,13 +30,13 @@ function App() {
     <div>
       <Header />
       <NewNote addClicked={addNote} />
-      {notes.map((currNote, num) => {
+      {allNotes.map((currNote, num) => {
         return (
           <Note
             key={num}
             id={num}
             title={currNote.title}
-            content={currNote.note}
+            content={currNote.content}
             delClicked={deleteNote}
           />
         );

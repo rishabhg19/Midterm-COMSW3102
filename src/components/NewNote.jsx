@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function NewNote(props) {
   const [note, setNote] = useState({
     title: "",
-    note: "",
+    content: "",
   });
 
   function handleChange(event) {
@@ -20,7 +20,7 @@ function NewNote(props) {
     props.addClicked(note);
     setNote({
       title: "",
-      note: "",
+      content: "",
     });
     event.preventDefault();
   }
@@ -35,9 +35,9 @@ function NewNote(props) {
           placeholder="Title"
         />
         <textarea
-          name="note"
+          name="content"
           onChange={handleChange}
-          value={note.note}
+          value={note.content}
           placeholder="Take a note..."
           rows="3"
         />
