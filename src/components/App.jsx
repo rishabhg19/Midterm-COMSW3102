@@ -35,7 +35,7 @@ function App() {
             key={num}
             id={num}
             title={currNote.title}
-            content={currNote.content}
+            content={currNote.note}
             delClicked={deleteNote}
           />
         );
